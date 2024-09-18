@@ -5,7 +5,7 @@ export const siteConfig = {
   description: "Controladores de plagas",
   navItems: [
     {
-      label: "Home",
+      label: "Inicio",
       href: "/", // #root?
     },
     {

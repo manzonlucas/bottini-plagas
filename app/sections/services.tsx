@@ -3,7 +3,7 @@ import { SectionWrapper } from "../section-wrapper"
 
 export const Services = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="services">
       <h2 className={title()}>Servicios</h2>
       <h3 className={subtitle({ class: "mt-4" })}>
         Nuestros servicios

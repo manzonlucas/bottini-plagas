@@ -17,12 +17,12 @@ import { siteConfig } from "@/app/config/site";
 export const Navbar = () => {
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" position="sticky" className="italic">
       <NavbarContent className="justify-between basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex items-center justify-start gap-1" href="/">
-            {/* <Logo /> */}
-            <p className="font-bold text-inherit">Bottini Plagas</p>
+          <NextLink className="flex flex-col items-center justify-start align-middle" href="/">
+            <h1 className="text-4xl font-bold tracking-widest">BOTTINI</h1>
+            <p className="text-inherit">Controladores de plagas</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden gap-4 ml-2 sm:flex">

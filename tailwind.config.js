@@ -1,4 +1,4 @@
-import {nextui} from '@nextui-org/theme'
+import { nextui } from '@nextui-org/theme'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
+        montserrat: ['"Montserrat"', 'sans-serif'], // Replace with your font name
       },
     },
   },

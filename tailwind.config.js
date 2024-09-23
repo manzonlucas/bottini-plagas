@@ -16,7 +16,7 @@ module.exports = {
       },
       colors: {
         primary: '#e0e404', // Replace with your desired primary color
-        // You can customize other colors here as well
+        background: '#F4F4F5', // Set your desired default background color
       },
     },
   },

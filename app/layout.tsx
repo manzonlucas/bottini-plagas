@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="en" className="scroll-smooth">
       <head />
       <body
         className={clsx(
@@ -33,7 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           {/* <div className="relative flex flex-col h-screen"> */}
           <Navbar />
-          <main className="container flex-grow mx-auto max-w-7xl font-montserrat">
+          <main className="flex-grow mx-auto font-montserrat">
+          {/* <main className="container flex-grow mx-auto max-w-7xl font-montserrat"></main> */}
             {children}
           </main>
           <Footer />

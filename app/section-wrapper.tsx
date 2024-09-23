@@ -9,9 +9,9 @@ interface HomeProps {
 export const SectionWrapper = ({ children, id, classnames }: HomeProps) => {
   return (
     <section className={`${classnames} h-screen flex flex-col items-center justify-center gap-4`} id={id}>
-      <div className="justify-center inline-block max-w-xl text-center">
+      {/* <div className="justify-center inline-block text-center"> */}
         {children}
-      </div>
+      {/* </div> */}
     </section>
   )
 }

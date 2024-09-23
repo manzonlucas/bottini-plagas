@@ -1,0 +1,6 @@
+.hero-background {
+  background-image: url('/topography.svg'); /* Path relative to the public folder */
+  background-size: 500px 500px;
+  background-repeat: repeat;
+  /* background-position: center; */
+}

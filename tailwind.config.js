@@ -14,6 +14,10 @@ module.exports = {
         mono: ["var(--font-mono)"],
         montserrat: ['"Montserrat"', 'sans-serif'], // Replace with your font name
       },
+      colors: {
+        primary: '#e0e404', // Replace with your desired primary color
+        // You can customize other colors here as well
+      },
     },
   },
   darkMode: "class",

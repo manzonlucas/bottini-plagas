@@ -18,14 +18,16 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky" className="italic">
-      <NavbarContent className="justify-between basis-1/5 sm:basis-full" justify="center">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex flex-col items-center justify-start align-middle" href="/">
+      <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
+        <NavbarBrand as="li" className="gap-3 mr-auto max-w-fit">
+          <NextLink className="flex flex-col items-center mr-auto align-middle" href="/">
             <h1 className="text-4xl font-bold tracking-widest">BOTTINI</h1>
-            <p className="text-inherit">Controladores de plagas</p>
+            <div className="pr-1 transform -skew-x-12 bg-primary">
+              <p className="italic transform skew-x-12">Controladores de plagas</p>
+            </div>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden gap-4 ml-2 sm:flex">
+        <ul className="justify-between hidden gap-4 ml-2 sm:flex">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -36,7 +38,9 @@ export const Navbar = () => {
                 color="foreground"
                 href={item.href}
               >
-                {item.label}
+                <div className="pr-1 transition-colors duration-200 transform -skew-x-12 bg-transparent hover:bg-primary">
+                  <p className="italic transform skew-x-12">{item.label}</p>
+                </div>
               </NextLink>
             </NavbarItem>
           ))}

@@ -31,14 +31,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       >
         <Providers>
-          {/* <div className="relative flex flex-col h-screen"> */}
           <Navbar />
           <main className="flex-grow mx-auto font-montserrat">
-          {/* <main className="container flex-grow mx-auto max-w-7xl font-montserrat"></main> */}
+            {/* <main className="container flex-grow mx-auto max-w-7xl font-montserrat"></main> */}
             {children}
           </main>
-          <Footer />
-          {/* </div> */}
         </Providers>
       </body>
     </html>

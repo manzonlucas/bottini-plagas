@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Navbar as NextUINavbar,
@@ -13,18 +13,27 @@ import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+
 import { siteConfig } from "@/app/config/site";
 
 export const Navbar = () => {
-
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="italic border-b-1 border-b-default">
+    <NextUINavbar
+      className="italic border-b-1 border-b-default"
+      maxWidth="xl"
+      position="sticky"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 mr-auto max-w-fit">
-          <NextLink className="flex flex-col items-center pb-1 mr-auto align-middle" href="/">
+          <NextLink
+            className="flex flex-col items-center pb-1 mr-auto align-middle"
+            href="/"
+          >
             <h1 className="text-4xl font-bold tracking-widest">BOTTINI</h1>
             <div className="pr-1 transform -skew-x-12 bg-primary">
-              <p className="italic transform skew-x-12">Controladores de plagas</p>
+              <p className="italic transform skew-x-12">
+                Controladores de plagas
+              </p>
             </div>
           </NextLink>
         </NavbarBrand>
@@ -40,7 +49,9 @@ export const Navbar = () => {
                 href={item.href}
               >
                 <div className="px-2 transition-colors duration-200 transform -skew-x-12 bg-transparent hover:bg-primary">
-                  <p className="text-xl italic transform skew-x-12">{item.label}</p>
+                  <p className="text-xl italic transform skew-x-12">
+                    {item.label}
+                  </p>
                 </div>
               </NextLink>
             </NavbarItem>

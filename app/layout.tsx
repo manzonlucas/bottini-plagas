@@ -7,7 +7,6 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/app/config/site";
 import { fontSans } from "@/app/config/fonts";
 import { Navbar } from "@/app/components/navbar";
-import { Footer } from "./components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -20,9 +19,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html suppressHydrationWarning lang="en" className="scroll-smooth">
+    <html suppressHydrationWarning className="scroll-smooth" lang="en">
       <head />
       <body
         className={clsx(

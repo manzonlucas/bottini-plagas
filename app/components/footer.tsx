@@ -1,4 +1,4 @@
-import { Link } from "@nextui-org/link"
+import { Link } from "@nextui-org/link";
 
 export const Footer = () => {
   return (
@@ -13,5 +13,5 @@ export const Footer = () => {
         <p className="text-primary">NextUI</p>
       </Link>
     </footer>
-  )
-}
+  );
+};

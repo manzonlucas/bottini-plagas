@@ -4,8 +4,6 @@ interface WaveProps {
 }
 
 export const Wave: React.FC<WaveProps> = ({ color, version }) => {
-  if (!version) return null
-
   if (version === 1) {
     return (
       <svg
@@ -39,4 +37,6 @@ export const Wave: React.FC<WaveProps> = ({ color, version }) => {
       </svg>
     );
   }
+
+  return null;
 };

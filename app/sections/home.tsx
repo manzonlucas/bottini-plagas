@@ -2,7 +2,7 @@ import Image from "next/image";
 import { SectionWrapper } from "../section-wrapper";
 import NextLink from "next/link";
 import '../hero-background.css'
-import { Wave } from "../components/waves";
+import { Wave } from "../components/wave";
 
 export const Home = () => {
   return (

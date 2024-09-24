@@ -1,5 +1,4 @@
 import { subtitle, title } from "../components/primitives"
-import { Wave } from "../components/waves"
 import { SectionWrapper } from "../section-wrapper"
 
 export const Services = () => {

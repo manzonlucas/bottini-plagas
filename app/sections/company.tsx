@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Wave } from "../components/waves"
+import { Wave } from "../components/wave"
 import { SectionWrapper } from "../section-wrapper"
 
 export const Company = () => {

@@ -3,22 +3,26 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Bottini Plagas",
   description: "Controladores de plagas",
+  phone: "",
+  cellphone: "",
+  whatsappNumber: "123",
+  address: "",
   navItems: [
     {
       label: "Inicio",
-      href: "#root", // #root?
+      href: "#/", // #root?
     },
     {
       label: "Servicios",
-      href: "#services",
+      href: "#servicios",
     },
     {
       label: "Nosotros",
-      href: "#company",
+      href: "#nosotros",
     },
     {
       label: "Contacto",
-      href: "#contact",
+      href: "#contacto",
     },
   ],
   links: {

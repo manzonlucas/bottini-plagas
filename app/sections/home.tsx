@@ -5,6 +5,8 @@ import { SectionWrapper } from "../sectionWrapper";
 import "../hero-background.css";
 import { Wave } from "../components/wave";
 import { SkewedText } from "../components/skewedText";
+import { siteConfig } from "../config/site";
+import { WhatsappButton } from "../components/whatsappButton";
 
 export const Home = () => {
   return (
@@ -13,18 +15,31 @@ export const Home = () => {
       id="/"
     >
       <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2">
-        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center border-r-8 bg-primary border-r-primary">
-          <h1 className="text-6xl italic font-bold text-gray-900 w-fit">
-            BOTTINI
-          </h1>
+        <div
+          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
+          style={{ borderRightWidth: "16px" }}
+        >
+          <div>
+            <h1 className="text-6xl italic font-bold text-gray-900 w-fit">
+              BOTTINI
+            </h1>
+            <SkewedText
+              backgroundColor="bg-default-50"
+              text="Controladores de plagas"
+            />
+          </div>
           <ul className="text-2xl text-gray-700">
             <li>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum velit suscipit accusamus, alias itaque repellendus
             </li>
           </ul>
-          <NextLink href="#contact">
-            <SkewedText text="Contactanos" backgroundColor="bg-default-50" classnames="text-2xl bg-default-50 hover:font-bold transition-colors duration-200 transform -skew-x-12 bg-default-50" />
+          <NextLink href={siteConfig.navItems[3].href.toLowerCase()}>
+            <SkewedText
+              backgroundColor="bg-default-50"
+              classnames="text-2xl bg-default-50 hover:font-bold transition-colors duration-200 transform -skew-x-12 bg-default-50 w-full px-4 py-4"
+              text="Contactanos"
+            />
           </NextLink>
         </div>
 
@@ -46,6 +61,7 @@ export const Home = () => {
         </div>
       </div>
       <Wave color="text-primary" version={1} />
+      <WhatsappButton />
     </SectionWrapper>
   );
 };

@@ -48,7 +48,7 @@ export const Services = () => {
           return (
             <div
               key={index}
-              className="flex flex-col gap-8 p-8 rounded-md border-1 bg-default-50"
+              className="flex flex-col gap-4 p-4 rounded-md border-1 bg-default-50"
             >
               <h3>
                 <SkewedText
@@ -56,7 +56,7 @@ export const Services = () => {
                   text={element.title}
                 />
               </h3>
-              <p>{element.content}</p>
+              <p className="text-sm xl:text-md">{element.content}</p>
             </div>
           );
         })}

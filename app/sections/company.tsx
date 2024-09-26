@@ -34,10 +34,10 @@ export const Company = () => {
 
       <div className="container flex items-center overflow-hidden rounded-md h-1/2">
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center border-r-8 bg-primary border-r-primary"
-          style={{ borderRightWidth: "16px" }}
+          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
+          style={{ borderRightWidth: "32px" }}
         >
-          <h2 className="text-6xl italic font-bold text-gray-900 w-fit">
+          <h2 className="text-4xl italic font-bold text-gray-900 w-fit">
             Nosotros
           </h2>
           {data.map((data, index) => {

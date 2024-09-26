@@ -50,7 +50,7 @@ export const Contact = () => {
       id={siteConfig.navItems[3].label.toLowerCase()}
     >
       <h2 className={title()}>Contacto</h2>
-      <div className="flex flex-col items-center w-4/5 gap-8 p-8 text-center rounded-md bg-background hero-background">
+      <div className="flex flex-col items-center w-4/5 gap-4 p-8 text-center rounded-md bg-background hero-background">
         {data.map((element, index) => {
           return (
             <button

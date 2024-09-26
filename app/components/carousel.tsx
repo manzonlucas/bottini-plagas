@@ -3,22 +3,27 @@
 import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { EmblaOptionsType } from 'embla-carousel'
+import Autoplay from 'embla-carousel-autoplay'
 
-type CarouselProps = {
-  slides?: number[]
-  options?: EmblaOptionsType
-}
-
-export const Carousel: React.FC<CarouselProps> = ({ slides = [1, 2, 3, 4, 5], options }) => {
-  const [carouselRef] = useEmblaCarousel(options)
+export const Carousel: React.FC = () => {
+  const slides = [1, 2, 3, 4, 5, 6, 7, 8]
+  const carouselOptions: EmblaOptionsType = { loop: true }
+  const [carouselRef] = useEmblaCarousel(carouselOptions, [Autoplay({ delay: 2000 })])
 
   return (
-    <div className="flex justify-center w-4/5 gap-16 max-w-7xl" ref={carouselRef}>
-      {slides.map((slide, index) => {
-        return (
-          <div className="border-green-500 h-36 w-36 border-1">Slide 2</div>
-        )
-      })}
+    <div className="w-4/5 overflow-hidden" ref={carouselRef}
+      style={{ pointerEvents: 'none', userSelect: 'none' }}
+    >
+      <div className="flex gap-4 pl-4">
+        {slides.map((slide, index) => (
+          <div
+            className="flex-[0_0_60%] sm:flex-[0_0_40%] lg:flex-[0_0_20%] h-24 bg-gray-200 rounded-md shadow-md flex items-center justify-center"
+            key={index}
+          >
+            <span className="text-2xl font-bold">{slide}</span>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

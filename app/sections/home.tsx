@@ -1,10 +1,10 @@
 import Image from "next/image";
 import NextLink from "next/link";
 
-import { SectionWrapper } from "../section-wrapper";
+import { SectionWrapper } from "../sectionWrapper";
 import "../hero-background.css";
 import { Wave } from "../components/wave";
-import { Carousel } from "../components/carousel";
+import { SkewedText } from "../components/skewedText";
 
 export const Home = () => {
   return (
@@ -12,7 +12,7 @@ export const Home = () => {
       classnames="-mt-16 hero-background h-screen relative"
       id="/"
     >
-      <div className="container flex items-center overflow-hidden rounded-md h-1/2">
+      <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2">
         <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center border-r-8 bg-primary border-r-primary">
           <h1 className="text-6xl italic font-bold text-gray-900 w-fit">
             BOTTINI
@@ -24,9 +24,7 @@ export const Home = () => {
             </li>
           </ul>
           <NextLink href="#contact">
-            <div className="px-2 transition-colors duration-200 transform -skew-x-12 bg-default-50 hover:font-bold">
-              <p className="text-2xl italic transform skew-x-12">Contactanos</p>
-            </div>
+            <SkewedText text="Contactanos" backgroundColor="bg-default-50" classnames="text-2xl bg-default-50 hover:font-bold transition-colors duration-200 transform -skew-x-12 bg-default-50" />
           </NextLink>
         </div>
 
@@ -48,8 +46,6 @@ export const Home = () => {
         </div>
       </div>
       <Wave color="text-primary" version={1} />
-
-      <Carousel />
     </SectionWrapper>
   );
 };

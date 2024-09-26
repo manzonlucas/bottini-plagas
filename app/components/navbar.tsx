@@ -15,13 +15,13 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/app/config/site";
+import { SkewedText } from "./skewedText";
 
 export const Navbar = () => {
   return (
     <NextUINavbar
       className="italic border-b-1 border-b-default"
       maxWidth="xl"
-      position="sticky"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 mr-auto max-w-fit">
@@ -30,11 +30,7 @@ export const Navbar = () => {
             href="/"
           >
             <h1 className="text-4xl font-bold tracking-widest">BOTTINI</h1>
-            <div className="pr-1 transform -skew-x-12 bg-primary">
-              <p className="italic transform skew-x-12">
-                Controladores de plagas
-              </p>
-            </div>
+            <SkewedText text="Controladores de plagas"/>
           </NextLink>
         </NavbarBrand>
         <ul className="justify-between hidden gap-4ml-2 sm:flex">

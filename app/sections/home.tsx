@@ -4,6 +4,7 @@ import NextLink from "next/link";
 import { SectionWrapper } from "../section-wrapper";
 import "../hero-background.css";
 import { Wave } from "../components/wave";
+import { Carousel } from "../components/carousel";
 
 export const Home = () => {
   return (
@@ -12,7 +13,7 @@ export const Home = () => {
       id="/"
     >
       <div className="container flex items-center overflow-hidden rounded-md h-1/2">
-        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center border-r-5 bg-primary border-r-primary">
+        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center border-r-8 bg-primary border-r-primary">
           <h1 className="text-6xl italic font-bold text-gray-900 w-fit">
             BOTTINI
           </h1>
@@ -32,9 +33,7 @@ export const Home = () => {
         <div className="container relative flex flex-col items-center h-full">
           <div
             className="absolute left-0 z-10 w-full h-full top-50 bg-primary"
-            style={{
-              clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)",
-            }}
+            style={{ clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
           />
           <div className="flex items-center justify-center w-full h-full bg-gray-300">
             <Image
@@ -49,6 +48,8 @@ export const Home = () => {
         </div>
       </div>
       <Wave color="text-primary" version={1} />
+
+      <Carousel />
     </SectionWrapper>
   );
 };

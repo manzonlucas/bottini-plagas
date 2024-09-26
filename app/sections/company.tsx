@@ -12,7 +12,7 @@ export const Company = () => {
       <Wave color="text-primary" version={2} />
 
       <div className="container flex items-center overflow-hidden rounded-md h-1/2">
-        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center border-r-5 bg-primary border-r-primary">
+        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center border-r-8 bg-primary border-r-primary">
           <h2 className="text-6xl italic font-bold text-gray-900 w-fit">
             Nosotros
           </h2>

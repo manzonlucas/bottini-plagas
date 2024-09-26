@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Bottini Plagas",
+  name: "Bottini - Controladores de plagas",
   description: "Controladores de plagas",
   phone: "",
   cellphone: "",

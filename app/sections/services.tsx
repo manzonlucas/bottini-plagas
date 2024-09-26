@@ -56,7 +56,7 @@ export const Services = () => {
                   text={element.title}
                 />
               </h3>
-              <p className="text-sm xl:text-md">{element.content}</p>
+              <p className="text-sm xl:text-md 2xl:text-large">{element.content}</p>
             </div>
           );
         })}

@@ -12,13 +12,14 @@ import fumigationImg from '../../public/fumigation01.jpg'
 export const Home = () => {
   return (
     <SectionWrapper
-      classnames="-mt-16 hero-background h-screen relative"
+      classnames="-mt-16 hero-background h-screen relative gap-8"
       id="/"
     >
       <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2">
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
-          style={{ borderRightWidth: "32px" }}
+          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary "
+          // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
+          // style={{ borderRightWidth: "32px" }}
         >
           <div>
             <h1 className="text-6xl italic font-bold text-gray-900 w-fit">
@@ -52,15 +53,12 @@ export const Home = () => {
 
         <div
           className="container relative flex flex-col items-center h-full"
-          style={{ borderLeft: '10px solid #e0e404' }}
+          // style={{ borderLeft: '10px solid #e0e404' }}
         >
-
-          <div
-            className="absolute left-0 z-10 w-full h-full top-50 bg-primary "
+          {/* <div
+            className="absolute z-10 w-full h-full top-50 bg-primary "
             style={{ borderLeft: '10px solid #e0e404', clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
-
-
-          />
+          /> */}
           <div className="flex items-center justify-center w-full h-full bg-gray-300">
             <Image
               alt=""
@@ -75,7 +73,6 @@ export const Home = () => {
         </div>
       </div>
 
-      <h3 className="text-2xl font-bold">Empresas que confían en nosotros</h3>
       <Carousel />
       <Wave color="text-primary" version={1} />
       <WhatsappButton />

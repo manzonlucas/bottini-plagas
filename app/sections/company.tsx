@@ -34,8 +34,9 @@ export const Company = () => {
 
       <div className="container flex items-center overflow-hidden rounded-md h-1/2">
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
-          style={{ borderRightWidth: "32px" }}
+          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center bg-primary"
+        // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
+        // style={{ borderRightWidth: "32px" }}
         >
           <h2 className="text-6xl italic font-bold text-gray-900 w-fit">
             Nosotros
@@ -54,13 +55,12 @@ export const Company = () => {
           })}
         </div>
 
-        <div className="container relative flex flex-col items-center h-full"
-          style={{ borderLeft: '10px solid #e0e404' }}
-        >
-          <div
+        <div
+          className="container relative flex flex-col items-center h-full">
+          {/* <div
             className="absolute z-10 w-full h-full top-50 bg-primary top-[-1px]"
-            style={{ borderLeft: '10px solid #e0e404', clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
-          />
+            style={{ clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
+          /> */}
           <div className="flex items-center justify-center w-full h-full bg-gray-300">
             <Image
               alt=""

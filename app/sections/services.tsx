@@ -1,7 +1,11 @@
+import { PlaguesGrid } from "../components/plaguesGrid";
 import { title } from "../components/primitives";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
 import { SectionWrapper } from "../sectionWrapper";
+import downArrow from '../../public/down-arrow.png'
+import Image from "next/image";
+import SmoothScrollLink from "../components/smoothScrollLink";
 
 const data = [
   {
@@ -38,29 +42,46 @@ const data = [
 
 export const Services = () => {
   return (
-    <SectionWrapper
-      classnames="bg-primary h-screen"
-      id={siteConfig.navItems[1].label.toLowerCase()}
-    >
-      <h2 className={title()}>Servicios</h2>
-      <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background">
-        {data.map((element, index) => {
-          return (
-            <div
-              key={index}
-              className="flex flex-col gap-4 p-4 rounded-md border-1 bg-default-50"
-            >
-              <h3>
-                <SkewedText
-                  classnames="font-bold text-xl"
-                  text={element.title}
-                />
-              </h3>
-              <p className="text-sm xl:text-md 2xl:text-large">{element.content}</p>
-            </div>
-          );
-        })}
-      </div>
-    </SectionWrapper>
+    <>
+      <SectionWrapper
+        classnames="bg-primary h-screen"
+        id={siteConfig.navItems[1].label.toLowerCase()}
+      >
+        <h2 className={title()}>Nuestros servicios</h2>
+        <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background">
+          {data.map((element, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-col gap-4 p-4 rounded-md border-1 bg-default-50"
+              >
+                <h3>
+                  <SkewedText
+                    classnames="font-bold text-xl"
+                    text={element.title}
+                  />
+                </h3>
+                <p className="text-sm xl:text-md 2xl:text-large">{element.content}</p>
+              </div>
+            )
+          })}
+
+          <Image src={downArrow} alt={'downArrow'} height={40} className="invisible" />
+          <SmoothScrollLink href="#plagues" className="flex justify-center">
+            <Image src={downArrow} alt={'downArrow'} height={40} className="transition-transform duration-100 ease-in-out cursor-pointer hover:scale-125" />
+          </SmoothScrollLink>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper
+        classnames="bg-primary"
+        id={'plagues'}
+      >
+        <h2 className={title()}>Principales plagas urbanas</h2>
+        <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background">
+          <PlaguesGrid />
+        </div>
+      </SectionWrapper>
+    </>
   );
 };

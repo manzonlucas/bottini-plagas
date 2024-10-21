@@ -7,6 +7,7 @@ import { Wave } from "../components/wave";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
 import { WhatsappButton } from "../components/whatsappButton";
+import { Carousel } from "../components/carousel";
 
 export const Home = () => {
   return (
@@ -16,7 +17,7 @@ export const Home = () => {
     >
       <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2">
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center bg-primary border-r-primary"
+          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
           style={{ borderRightWidth: "32px" }}
         >
           <div>
@@ -28,10 +29,12 @@ export const Home = () => {
               text="Controladores de plagas"
             />
           </div>
-          <ul className="text-2xl text-gray-700">
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum velit suscipit accusamus, alias itaque repellendus
+          <ul className="flex flex-col gap-4 text-2xl text-gray-700">
+            <li className="text-lg">
+              Empresa líder de la ciudad de Pergamino, dedicada al manejo integral de plagas, que cuenta con más de 30 años de trayectoria en el rubro.
+            </li>
+            <li className="text-lg">
+              Reconocida por su honestidad, seriedad, compromiso y calidad de los servicios.
             </li>
           </ul>
           <NextLink href={siteConfig.navItems[3].href.toLowerCase()}>
@@ -56,10 +59,14 @@ export const Home = () => {
               objectFit="cover" // This ensures the image covers the entire container
               objectPosition="right"
               src={"/main2.jpg"}
+              priority
             />
           </div>
         </div>
       </div>
+
+      <h3 className="text-2xl font-bold">Empresas que confían en nosotros</h3>
+      <Carousel />
       <Wave color="text-primary" version={1} />
       <WhatsappButton />
     </SectionWrapper>

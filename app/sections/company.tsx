@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Wave } from "../components/wave";
 import { SectionWrapper } from "../sectionWrapper";
 import { SkewedText } from "../components/skewedText";
-import { Carousel } from "../components/carousel";
 import { siteConfig } from "../config/site";
 
 const data = [
@@ -73,9 +72,6 @@ export const Company = () => {
           </div>
         </div>
       </div>
-
-      <h3 className="text-2xl font-bold">Empresas que confían en nosotros</h3>
-      <Carousel />
       <Wave color="text-primary" version={1} />
     </SectionWrapper>
   );

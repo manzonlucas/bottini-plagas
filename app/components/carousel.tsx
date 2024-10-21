@@ -4,28 +4,114 @@ import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image"
+// Logos
+import threeL from '../../public/clients/3l.png'
+import aca from '../../public/clients/aca.png'
+import argenmilla from '../../public/clients/argenmilla.png'
+import avicoper from '../../public/clients/avicoper.png'
+import bioceres from '../../public/clients/bioceres.png';
+import cagla from '../../public/clients/cagla.png';
+import doneugenio from '../../public/clients/doneugenio.jpg';
+import espunia from '../../public/clients/espunia.jpg';
+import flicpanificados from '../../public/clients/flicpanificados.jpg';
+import lacadireggio from '../../public/clients/lacadireggio.jpg';
+import ldistribuciones from '../../public/clients/ldistribuciones.png';
+import oca from '../../public/clients/oca.png';
+import pardo from '../../public/clients/pardo.jpg';
+import raiceshotel from '../../public/clients/raiceshotel.gif';
+import rizobacter from '../../public/clients/rizobacter.png';
+import seedar from '../../public/clients/seedar.jpg';
+
+const slides = [
+  {
+    img: threeL,
+    alt: '3L',
+  },
+  {
+    img: aca,
+    alt: 'Aca',
+  },
+  {
+    img: argenmilla,
+    alt: 'Argenmilla',
+  },
+  {
+    img: avicoper,
+    alt: 'Avicoper',
+  },
+  {
+    img: bioceres,
+    alt: 'Bioceres',
+  },
+  {
+    img: cagla,
+    alt: 'Cagla',
+  },
+  {
+    img: doneugenio,
+    alt: 'Don Eugenio',
+  },
+  {
+    img: espunia,
+    alt: 'Espuña',
+  },
+  {
+    img: flicpanificados,
+    alt: 'Flic Panificados',
+  },
+  {
+    img: lacadireggio,
+    alt: 'Lacadi Reggio',
+  },
+  {
+    img: ldistribuciones,
+    alt: 'L Distribuciones',
+  },
+  {
+    img: oca,
+    alt: 'OCA',
+  },
+  {
+    img: pardo,
+    alt: 'Pardo',
+  },
+  {
+    img: raiceshotel,
+    alt: 'Raices Hotel',
+  },
+  {
+    img: rizobacter,
+    alt: 'Rizobacter',
+  },
+  {
+    img: seedar,
+    alt: 'Seedar',
+  },
+]
 
 export const Carousel: React.FC = () => {
-  const slides = [1, 2, 3, 4, 5, 6, 7, 8];
-  const carouselOptions: EmblaOptionsType = { loop: true };
+  const carouselOptions: EmblaOptionsType = { loop: true }
   const [carouselRef] = useEmblaCarousel(carouselOptions, [
-    Autoplay({ delay: 2000 }),
-  ]);
+    Autoplay({ delay: 2000, stopOnInteraction: false }),
+  ])
 
   return (
     <div
       ref={carouselRef}
-      className="w-4/5 overflow-hidden"
-      style={{ pointerEvents: "none", userSelect: "none" }}
+      className="z-10 w-4/5 overflow-hidden"
+      style={{ userSelect: "none" }}
+    // style={{ pointerEvents: "none", userSelect: "none" }}
     >
       <div className="flex gap-4 pl-4">
         {slides.map((slide, index) => (
-          <div
+          <Image
+            src={slide.img}
+            alt={slide.alt}
             key={index}
-            className="flex-[0_0_60%] sm:flex-[0_0_40%] lg:flex-[0_0_20%] h-24 bg-gray-200 rounded-md shadow-md flex items-center justify-center"
-          >
-            <span className="text-2xl font-bold">{slide}</span>
-          </div>
+            height={80}
+            className="p-4 bg-white rounded-lg"
+          />
         ))}
       </div>
     </div>

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import NextLink from "next/link";
-
 import { SectionWrapper } from "../sectionWrapper";
 import "../hero-background.css";
 import { Wave } from "../components/wave";
@@ -8,6 +6,7 @@ import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
 import { WhatsappButton } from "../components/whatsappButton";
 import { Carousel } from "../components/carousel";
+import SmoothScrollLink from "../components/smoothScrollLink";
 
 export const Home = () => {
   return (
@@ -37,13 +36,17 @@ export const Home = () => {
               Reconocida por su honestidad, seriedad, compromiso y calidad de los servicios.
             </li>
           </ul>
-          <NextLink href={siteConfig.navItems[3].href.toLowerCase()}>
+
+          <SmoothScrollLink
+            className="flex flex-col items-center pb-1 mr-auto align-middle"
+            href={siteConfig.navItems[3].href.toLowerCase()}
+          >
             <SkewedText
               backgroundColor="bg-default-50"
               classnames="text-2xl bg-default-50 hover:font-bold transition-colors duration-200 transform -skew-x-12 bg-default-50 w-full px-4 py-4"
               text="Contactanos"
             />
-          </NextLink>
+          </SmoothScrollLink>
         </div>
 
         <div className="container relative flex flex-col items-center h-full">

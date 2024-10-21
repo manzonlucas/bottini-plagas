@@ -11,30 +11,43 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
 import clsx from "clsx";
-
 import { SkewedText } from "./skewedText";
-
 import { siteConfig } from "@/app/config/site";
+import SmoothScrollLink from "./smoothScrollLink";
 
 export const Navbar = () => {
   return (
     <NextUINavbar className="italic border-b-1 border-b-default" maxWidth="xl">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 mr-auto max-w-fit">
-          <NextLink
+          <SmoothScrollLink
             className="flex flex-col items-center pb-1 mr-auto align-middle"
             href={siteConfig.navItems[0].href}
           >
             <h1 className="text-4xl font-bold tracking-widest">BOTTINI</h1>
             <SkewedText text="Controladores de plagas" />
-          </NextLink>
+          </SmoothScrollLink>
         </NavbarBrand>
         <ul className="justify-between hidden gap-4ml-2 sm:flex">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
+              <SmoothScrollLink
+                className={clsx(
+                  linkStyles({ color: "foreground" }),
+                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                )}
+                href={item.href}
+              >
+                <div className="px-2 transition-all duration-200 ease-in-out transform -skew-x-12 bg-transparent hover:bg-primary">
+                  <p className="text-xl italic transform skew-x-12">
+                    {item.label}
+                  </p>
+                </div>
+              </SmoothScrollLink>
+
+              {/* Prev to SmoothScrollLink */}
+              {/* <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
@@ -47,7 +60,7 @@ export const Navbar = () => {
                     {item.label}
                   </p>
                 </div>
-              </NextLink>
+              </NextLink> */}
             </NavbarItem>
           ))}
         </ul>

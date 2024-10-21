@@ -1,28 +1,33 @@
+import Image from "next/image";
+
+import { PlaguesGrid } from "../components/plaguesGrid";
 import { title } from "../components/primitives";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
 import { SectionWrapper } from "../sectionWrapper";
+import downArrow from "../../public/down-arrow.png";
+import SmoothScrollLink from "../components/smoothScrollLink";
 
 const data = [
   {
-    title: "Manejo integral de plagas",
-    content:
-      "A través de medidas de control aseguramos la mejora del bienestar de los residentes, la reducción de las enfermedades transmisibles y el mantenimiento de ambientes sanos.",
-  },
-  {
     title: "Desinfección",
     content:
-      "A través de este tratamiento eliminamos microorganismos (virus, bacterias, hongos, etc.) en todo tipo de superficies, con el fin de garantizar la seguridad en el ambiente.",
+      "Se produce la eliminación de agentes infecciosos y contaminantes que se encuentran fuera del organismo, por aplicación directa de medios físicos o químicos.",
   },
   {
     title: "Desinsectación",
     content:
-      "A partir del cual conseguimos eliminar determinados artrópodos dañinos, principalmente insectos, que constituyen especies no deseadas para la agricultura, ganadería o para las personas.",
+      "Técnica de saneamiento dirigido a eliminar o controlar la población de insectos y otros artrópodos.",
   },
   {
     title: "Desratización",
     content:
-      "Mediante el cual aseguramos el control de roedores sinantrópicos tanto en zona urbana como rural. Este proceso se lleva a cabo a través de diversos medios químicos  y físicos.",
+      "Técnica de saneamiento que se aplica para la exterminación de roedores.",
+  },
+  {
+    title: "Manejo integral de plagas",
+    content:
+      "Sistema en el que se integran medidas preventivas y correctivas para mantener el nivel de las plagas en un mínimo tolerable.",
   },
   {
     title: "Actualización",
@@ -38,29 +43,55 @@ const data = [
 
 export const Services = () => {
   return (
-    <SectionWrapper
-      classnames="bg-primary h-screen"
-      id={siteConfig.navItems[1].label.toLowerCase()}
-    >
-      <h2 className={title()}>Servicios</h2>
-      <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background">
-        {data.map((element, index) => {
-          return (
-            <div
-              key={index}
-              className="flex flex-col gap-4 p-4 rounded-md border-1 bg-default-50"
-            >
-              <h3>
-                <SkewedText
-                  classnames="font-bold text-xl"
-                  text={element.title}
-                />
-              </h3>
-              <p className="text-sm xl:text-md 2xl:text-large">{element.content}</p>
-            </div>
-          );
-        })}
-      </div>
-    </SectionWrapper>
+    <>
+      <SectionWrapper
+        classnames="bg-primary h-screen"
+        id={siteConfig.navItems[1].label.toLowerCase()}
+      >
+        <h2 className={title()}>Nuestros servicios</h2>
+        <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background">
+          {data.map((element, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-col gap-4 p-4 rounded-md border-1 bg-default-50"
+              >
+                <h3>
+                  <SkewedText
+                    classnames="font-bold text-xl"
+                    text={element.title}
+                  />
+                </h3>
+                <p className="text-sm xl:text-md 2xl:text-large">
+                  {element.content}
+                </p>
+              </div>
+            );
+          })}
+
+          <Image
+            alt={"downArrow"}
+            className="invisible"
+            height={40}
+            src={downArrow}
+          />
+          <SmoothScrollLink className="flex justify-center" href="#plagues">
+            <Image
+              alt={"downArrow"}
+              className="transition-transform duration-100 ease-in-out cursor-pointer hover:scale-125"
+              height={40}
+              src={downArrow}
+            />
+          </SmoothScrollLink>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper classnames="bg-primary pt-20" id={"plagues"}>
+        <h2 className={title()}>Principales plagas urbanas</h2>
+        <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background">
+          <PlaguesGrid />
+        </div>
+      </SectionWrapper>
+    </>
   );
 };

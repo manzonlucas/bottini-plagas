@@ -4,7 +4,7 @@ import { Wave } from "../components/wave";
 import { SectionWrapper } from "../sectionWrapper";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
-import fumigationImg from '../../public/fumigation02.jpg'
+import fumigationImg from "../../public/fumigation02.jpg";
 
 const data = [
   {
@@ -35,8 +35,8 @@ export const Company = () => {
       <div className="container flex items-center overflow-hidden rounded-md h-1/2">
         <div
           className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center bg-primary"
-        // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
-        // style={{ borderRightWidth: "32px" }}
+          // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
+          // style={{ borderRightWidth: "32px" }}
         >
           <h2 className="text-6xl italic font-bold text-gray-900 w-fit">
             Nosotros
@@ -55,8 +55,7 @@ export const Company = () => {
           })}
         </div>
 
-        <div
-          className="container relative flex flex-col items-center h-full">
+        <div className="container relative flex flex-col items-center h-full">
           {/* <div
             className="absolute z-10 w-full h-full top-50 bg-primary top-[-1px]"
             style={{ clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
@@ -67,8 +66,8 @@ export const Company = () => {
               // className="absolute inset-0" // This ensures the image fills the container
               // objectFit="cover" // This ensures the image covers the entire container
               // objectPosition="right"
-              src={fumigationImg}
               fill
+              src={fumigationImg}
             />
           </div>
         </div>

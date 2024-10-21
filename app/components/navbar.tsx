@@ -12,9 +12,11 @@ import {
 import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
+
 import { SkewedText } from "./skewedText";
-import { siteConfig } from "@/app/config/site";
 import SmoothScrollLink from "./smoothScrollLink";
+
+import { siteConfig } from "@/app/config/site";
 
 export const Navbar = () => {
   return (

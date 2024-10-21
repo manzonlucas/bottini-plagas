@@ -1,7 +1,8 @@
 import { Link } from "@nextui-org/link";
 
-import { SkewedText } from "./skewedText";
 import { siteConfig } from "../config/site";
+
+import { SkewedText } from "./skewedText";
 
 export const Footer = () => {
   return (

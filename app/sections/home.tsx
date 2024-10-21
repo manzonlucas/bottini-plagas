@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { SectionWrapper } from "../sectionWrapper";
 import "../hero-background.css";
 import { Wave } from "../components/wave";
@@ -7,7 +8,7 @@ import { siteConfig } from "../config/site";
 import { WhatsappButton } from "../components/whatsappButton";
 import { Carousel } from "../components/carousel";
 import SmoothScrollLink from "../components/smoothScrollLink";
-import fumigationImg from '../../public/fumigation01.jpg'
+import fumigationImg from "../../public/fumigation01.jpg";
 
 export const Home = () => {
   return (
@@ -32,10 +33,13 @@ export const Home = () => {
           </div>
           <ul className="flex flex-col gap-4 text-2xl text-gray-700">
             <li className="text-lg">
-              Empresa líder de la ciudad de Pergamino, dedicada al manejo integral de plagas, que cuenta con más de 30 años de trayectoria en el rubro.
+              Empresa líder de la ciudad de Pergamino, dedicada al manejo
+              integral de plagas, que cuenta con más de 30 años de trayectoria
+              en el rubro.
             </li>
             <li className="text-lg">
-              Reconocida por su honestidad, seriedad, compromiso y calidad de los servicios.
+              Reconocida por su honestidad, seriedad, compromiso y calidad de
+              los servicios.
             </li>
           </ul>
 
@@ -61,13 +65,13 @@ export const Home = () => {
           /> */}
           <div className="flex items-center justify-center w-full h-full bg-gray-300">
             <Image
-              alt=""
-              // className="absolute inset-0" // This ensures the image fills the container
-              layout="fill"
+              alt="Fumigation"
+              priority
               objectFit="cover" // This ensures the image covers the entire container
               objectPosition="left"
               src={fumigationImg}
-              priority
+              // className="absolute inset-0" // This ensures the image fills the container
+              layout="fill"
             />
           </div>
         </div>

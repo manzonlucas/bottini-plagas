@@ -1,10 +1,11 @@
+import Image from "next/image";
+
 import { PlaguesGrid } from "../components/plaguesGrid";
 import { title } from "../components/primitives";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
 import { SectionWrapper } from "../sectionWrapper";
-import downArrow from '../../public/down-arrow.png'
-import Image from "next/image";
+import downArrow from "../../public/down-arrow.png";
 import SmoothScrollLink from "../components/smoothScrollLink";
 
 const data = [
@@ -61,22 +62,31 @@ export const Services = () => {
                     text={element.title}
                   />
                 </h3>
-                <p className="text-sm xl:text-md 2xl:text-large">{element.content}</p>
+                <p className="text-sm xl:text-md 2xl:text-large">
+                  {element.content}
+                </p>
               </div>
-            )
+            );
           })}
 
-          <Image src={downArrow} alt={'downArrow'} height={40} className="invisible" />
-          <SmoothScrollLink href="#plagues" className="flex justify-center">
-            <Image src={downArrow} alt={'downArrow'} height={40} className="transition-transform duration-100 ease-in-out cursor-pointer hover:scale-125" />
+          <Image
+            alt={"downArrow"}
+            className="invisible"
+            height={40}
+            src={downArrow}
+          />
+          <SmoothScrollLink className="flex justify-center" href="#plagues">
+            <Image
+              alt={"downArrow"}
+              className="transition-transform duration-100 ease-in-out cursor-pointer hover:scale-125"
+              height={40}
+              src={downArrow}
+            />
           </SmoothScrollLink>
         </div>
       </SectionWrapper>
 
-      <SectionWrapper
-        classnames="bg-primary pt-20"
-        id={'plagues'}
-      >
+      <SectionWrapper classnames="bg-primary pt-20" id={"plagues"}>
         <h2 className={title()}>Principales plagas urbanas</h2>
         <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background">
           <PlaguesGrid />

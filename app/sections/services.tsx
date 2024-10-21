@@ -9,24 +9,24 @@ import SmoothScrollLink from "../components/smoothScrollLink";
 
 const data = [
   {
-    title: "Manejo integral de plagas",
-    content:
-      "A través de medidas de control aseguramos la mejora del bienestar de los residentes, la reducción de las enfermedades transmisibles y el mantenimiento de ambientes sanos.",
-  },
-  {
     title: "Desinfección",
     content:
-      "A través de este tratamiento eliminamos microorganismos (virus, bacterias, hongos, etc.) en todo tipo de superficies, con el fin de garantizar la seguridad en el ambiente.",
+      "Se produce la eliminación de agentes infecciosos y contaminantes que se encuentran fuera del organismo, por aplicación directa de medios físicos o químicos.",
   },
   {
     title: "Desinsectación",
     content:
-      "A partir del cual conseguimos eliminar determinados artrópodos dañinos, principalmente insectos, que constituyen especies no deseadas para la agricultura, ganadería o para las personas.",
+      "Técnica de saneamiento dirigido a eliminar o controlar la población de insectos y otros artrópodos.",
   },
   {
     title: "Desratización",
     content:
-      "Mediante el cual aseguramos el control de roedores sinantrópicos tanto en zona urbana como rural. Este proceso se lleva a cabo a través de diversos medios químicos  y físicos.",
+      "Técnica de saneamiento que se aplica para la exterminación de roedores.",
+  },
+  {
+    title: "Manejo integral de plagas",
+    content:
+      "Sistema en el que se integran medidas preventivas y correctivas para mantener el nivel de las plagas en un mínimo tolerable.",
   },
   {
     title: "Actualización",
@@ -74,7 +74,7 @@ export const Services = () => {
       </SectionWrapper>
 
       <SectionWrapper
-        classnames="bg-primary"
+        classnames="bg-primary pt-20"
         id={'plagues'}
       >
         <h2 className={title()}>Principales plagas urbanas</h2>

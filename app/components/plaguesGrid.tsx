@@ -48,7 +48,8 @@ export const PlaguesGrid = () => {
               <Image
                 src={element.img}
                 alt={element.alt}
-                className="text-sm xl:text-md 2xl:text-large"
+                className="text-sm rounded-md xl:text-md 2xl:text-large"
+                height={200}
               />
             </div>
           </div>

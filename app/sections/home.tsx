@@ -7,6 +7,7 @@ import { siteConfig } from "../config/site";
 import { WhatsappButton } from "../components/whatsappButton";
 import { Carousel } from "../components/carousel";
 import SmoothScrollLink from "../components/smoothScrollLink";
+import fumigationImg from '../../public/fumigation01.jpg'
 
 export const Home = () => {
   return (
@@ -38,7 +39,7 @@ export const Home = () => {
           </ul>
 
           <SmoothScrollLink
-            className="flex flex-col items-center pb-1 mr-auto align-middle"
+            className="flex flex-col items-center pb-1"
             href={siteConfig.navItems[3].href.toLowerCase()}
           >
             <SkewedText
@@ -49,19 +50,25 @@ export const Home = () => {
           </SmoothScrollLink>
         </div>
 
-        <div className="container relative flex flex-col items-center h-full">
+        <div
+          className="container relative flex flex-col items-center h-full"
+          style={{ borderLeft: '10px solid #e0e404' }}
+        >
+
           <div
-            className="absolute left-0 z-10 w-full h-full top-50 bg-primary"
-            style={{ clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
+            className="absolute left-0 z-10 w-full h-full top-50 bg-primary "
+            style={{ borderLeft: '10px solid #e0e404', clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
+
+
           />
           <div className="flex items-center justify-center w-full h-full bg-gray-300">
             <Image
               alt=""
-              className="absolute inset-0" // This ensures the image fills the container
+              // className="absolute inset-0" // This ensures the image fills the container
               layout="fill"
               objectFit="cover" // This ensures the image covers the entire container
-              objectPosition="right"
-              src={"/main2.jpg"}
+              objectPosition="left"
+              src={fumigationImg}
               priority
             />
           </div>

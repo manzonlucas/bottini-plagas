@@ -30,7 +30,7 @@ export const Contact = () => {
     },
     {
       title: "Celular/Whatsapp 2",
-      content: siteConfig.cellphone,
+      content: siteConfig.cellphone2,
       onClick: handleCopyToClipboard,
     },
     {

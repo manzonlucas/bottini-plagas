@@ -65,8 +65,8 @@ export const Home = () => {
           /> */}
           <div className="flex items-center justify-center w-full h-full bg-gray-300">
             <Image
-              alt="Fumigation"
               priority
+              alt="Fumigation"
               objectFit="cover" // This ensures the image covers the entire container
               objectPosition="left"
               src={fumigationImg}

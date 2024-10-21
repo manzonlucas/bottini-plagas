@@ -98,23 +98,25 @@ export const Carousel: React.FC = () => {
   ]);
 
   return (
-    <div
-      ref={carouselRef}
-      className="z-10 flex flex-col items-center w-4/5 gap-2 overflow-hidden"
-      style={{ userSelect: "none" }}
-      // style={{ pointerEvents: "none", userSelect: "none" }}
-    >
+    <div className="flex flex-col items-center gap-2">
       <h3 className="text-2xl font-bold">Empresas que confían en nosotros</h3>
-      <div className="flex gap-4 pl-4">
-        {slides.map((slide, index) => (
-          <Image
-            key={index}
-            alt={slide.alt}
-            className="p-4 bg-white rounded-lg"
-            height={80}
-            src={slide.img}
-          />
-        ))}
+      <div
+        ref={carouselRef}
+        className="z-10 w-4/5 overflow-hidden"
+        style={{ userSelect: "none" }}
+        // style={{ pointerEvents: "none", userSelect: "none" }}
+      >
+        <div className="flex gap-4 pl-4">
+          {slides.map((slide, index) => (
+            <Image
+              key={index}
+              alt={slide.alt}
+              className="p-4 bg-white rounded-lg"
+              height={80}
+              src={slide.img}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

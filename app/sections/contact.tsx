@@ -24,23 +24,28 @@ export const Contact = () => {
 
   const data: ContactDataElement[] = [
     {
-      title: "Teléfono",
-      content: "xxx-xxxx-xxxx",
+      title: "Celular/Whatsapp 1",
+      content: siteConfig.cellphone,
       onClick: handleCopyToClipboard,
     },
     {
-      title: "Celular",
-      content: "xxx-xxxx-xxxx",
+      title: "Celular/Whatsapp 2",
+      content: siteConfig.cellphone,
+      onClick: handleCopyToClipboard,
+    },
+    {
+      title: "Teléfono fijo",
+      content: siteConfig.phone,
       onClick: handleCopyToClipboard,
     },
     {
       title: "Mail",
-      content: "xxxxx@xxxxx.com",
+      content: siteConfig.email,
       onClick: handleCopyToClipboard,
     },
     {
       title: "Dirección",
-      content: "Valentin Potente 450, Pergamino, Buenos Aires.",
+      content: siteConfig.address,
     },
   ];
 

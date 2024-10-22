@@ -9,6 +9,7 @@ import { WhatsappButton } from "../components/whatsappButton";
 import { Carousel } from "../components/carousel";
 import SmoothScrollLink from "../components/smoothScrollLink";
 import fumigationImg from "../../public/fumigation01.jpg";
+import { SkewedLogo } from "../components/skewedLogo";
 
 export const Home = () => {
   return (
@@ -19,18 +20,10 @@ export const Home = () => {
       <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2">
         <div
           className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary "
-          // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
-          // style={{ borderRightWidth: "32px" }}
+        // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
+        // style={{ borderRightWidth: "32px" }}
         >
-          <div>
-            <h1 className="text-6xl italic font-bold text-gray-900 w-fit">
-              BOTTINI
-            </h1>
-            <SkewedText
-              backgroundColor="bg-default-50"
-              text="Controladores de plagas"
-            />
-          </div>
+          <SkewedLogo />
           <ul className="flex flex-col gap-4 text-2xl text-gray-700">
             <li className="text-lg">
               Empresa líder de la ciudad de Pergamino, dedicada al manejo
@@ -57,7 +50,7 @@ export const Home = () => {
 
         <div
           className="container relative flex flex-col items-center h-full"
-          // style={{ borderLeft: '10px solid #e0e404' }}
+        // style={{ borderLeft: '10px solid #e0e404' }}
         >
           {/* <div
             className="absolute z-10 w-full h-full top-50 bg-primary "

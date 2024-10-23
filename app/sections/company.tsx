@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Wave } from "../components/wave";
 import { SectionWrapper } from "../sectionWrapper";
 import { SkewedText } from "../components/skewedText";
@@ -37,8 +36,8 @@ export const Company = () => {
         {/* <div className="container flex items-center overflow-hidden rounded-md h-1/2"> */}
         <div
           className="relative z-10 flex flex-col items-center justify-center h-full gap-4 p-4 text-center rounded-md bg-primary"
-        // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
-        // style={{ borderRightWidth: "32px" }}
+          // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
+          // style={{ borderRightWidth: "32px" }}
         >
           <h2 className={`${title()} z-10`}>Nosotros</h2>
           {data.map((data, index) => {

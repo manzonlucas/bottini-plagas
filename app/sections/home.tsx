@@ -5,7 +5,6 @@ import "../hero-background.css";
 import { Wave } from "../components/wave";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
-import { WhatsappButton } from "../components/whatsappButton";
 import { Carousel } from "../components/carousel";
 import SmoothScrollLink from "../components/smoothScrollLink";
 import fumigationImg from "../../public/fumigation01.jpg";
@@ -22,8 +21,8 @@ export const Home = () => {
         {/* <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2"> */}
         <div
           className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-8 text-center bg-primary "
-        // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
-        // style={{ borderRightWidth: "32px" }}
+          // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
+          // style={{ borderRightWidth: "32px" }}
         >
           <SkewedLogo />
           <ul className="flex flex-col gap-4 text-2xl text-gray-700">
@@ -52,18 +51,17 @@ export const Home = () => {
 
         <div
           className="container relative items-center h-48"
-        // className="container relative flex flex-col items-center h-full"
+          // className="container relative flex flex-col items-center h-full"
         >
-
           {/* <div className="flex items-center justify-center w-full h-full bg-gray-300"> */}
           <Image
             priority
             alt="Fumigation"
-            objectFit="cover" // This ensures the image covers the entire container
-            objectPosition="left"
+            // objectFit="cover" // This ensures the image covers the entire container
+            // objectPosition="left"
             src={fumigationImg}
             // className="absolute inset-0" // This ensures the image fills the container
-            layout="fill"
+            // layout="fill"
           />
           {/* </div> */}
         </div>

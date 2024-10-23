@@ -7,10 +7,10 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
 // Images
-import fumigationImg from "../../public/fumigation02.jpg"
-import companyImg01 from "../../public/company/company-img-01.jpeg"
-import companyImg02 from "../../public/company/company-img-02.jpeg"
-import companyImg03 from "../../public/company/company-img-03.jpeg"
+import fumigationImg from "../../public/fumigation02.jpg";
+import companyImg01 from "../../public/company/company-img-01.jpeg";
+import companyImg02 from "../../public/company/company-img-02.jpeg";
+import companyImg03 from "../../public/company/company-img-03.jpeg";
 
 const slides = [
   {
@@ -29,7 +29,7 @@ const slides = [
     img: companyImg03,
     alt: "Company image 03",
   },
-]
+];
 
 export const CarouselImages: React.FC = () => {
   const carouselOptions: EmblaOptionsType = { loop: true };
@@ -54,5 +54,5 @@ export const CarouselImages: React.FC = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};

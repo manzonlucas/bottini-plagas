@@ -15,14 +15,13 @@ interface ContactDataElement {
 
 export const Contact = () => {
   const handleCopyToClipboard = (element: ContactDataElement) => {
-    navigator.clipboard.writeText(element.content)
-      .then(() => {
-        toast.success(
-          `El ${element.title.toLowerCase()} fue copiado al portapapeles.`,
-          { position: "bottom-center" },
-        )
-      })
-  }
+    navigator.clipboard.writeText(element.content).then(() => {
+      toast.success(
+        `El ${element.title.toLowerCase()} fue copiado al portapapeles.`,
+        { position: "bottom-center" },
+      );
+    });
+  };
 
   const data: ContactDataElement[] = [
     {
@@ -66,7 +65,7 @@ export const Contact = () => {
             <button
               key={index}
               aria-label={`Copy ${element.title} to clipboard`}
-              // className={`flex flex-col w-1/3 p-2 text-xl rounded-md border-1 bg-default-50 items-center 
+              // className={`flex flex-col w-1/3 p-2 text-xl rounded-md border-1 bg-default-50 items-center
               className={`flex flex-col w-auto p-2 text-xl rounded-md border-1 bg-default-50 items-center 
                 ${element.onClick && "hover:font-bold"} 
                 ${!element.onClick && "cursor-default"} 

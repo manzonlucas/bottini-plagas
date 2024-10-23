@@ -11,22 +11,26 @@ import {
 } from "@nextui-org/navbar";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
+import { useState } from "react";
 
 import { SkewedText } from "./skewedText";
 import SmoothScrollLink from "./smoothScrollLink";
 
 import { siteConfig } from "@/app/config/site";
-import { useState } from "react";
 
 export const Navbar = () => {
-  const [isNavBarOpen, setIsNavBarOpen] = useState(false)
+  const [isNavBarOpen, setIsNavBarOpen] = useState(false);
 
   const handleToggleNavBar = () => {
-    setIsNavBarOpen(!isNavBarOpen)
-  }
+    setIsNavBarOpen(!isNavBarOpen);
+  };
 
   return (
-    <NextUINavbar className="italic border-b-1 border-b-default" maxWidth="xl" isMenuOpen={isNavBarOpen}>
+    <NextUINavbar
+      className="italic border-b-1 border-b-default"
+      isMenuOpen={isNavBarOpen}
+      maxWidth="xl"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 mr-auto max-w-fit">
           <SmoothScrollLink
@@ -66,8 +70,11 @@ export const Navbar = () => {
         <div className="flex flex-col mx-4 mt-2">
           {siteConfig.navItems.map((item, index) => (
             <div key={`${item}-${index}`}>
-              <NavbarMenuItem onClick={handleToggleNavBar} className="py-4 text-2xl">
-                <SmoothScrollLink href={item.href}>
+              <NavbarMenuItem onClick={handleToggleNavBar}>
+                <SmoothScrollLink
+                  className="inline-block w-full py-4 text-2xl"
+                  href={item.href}
+                >
                   {item.label}
                 </SmoothScrollLink>
               </NavbarMenuItem>
@@ -76,6 +83,6 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
-    </NextUINavbar >
+    </NextUINavbar>
   );
 };

@@ -105,7 +105,7 @@ export const Carousel: React.FC = () => {
         ref={carouselRef}
         className="z-10 w-4/5 overflow-hidden"
         style={{ userSelect: "none" }}
-      // style={{ pointerEvents: "none", userSelect: "none" }}
+        // style={{ pointerEvents: "none", userSelect: "none" }}
       >
         <div className="flex gap-4 pl-4">
           {slides.map((slide, index) => (

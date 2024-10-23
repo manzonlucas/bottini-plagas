@@ -80,11 +80,11 @@ export const Services = () => {
           <SmoothScrollLink className="justify-center hidden" href="#plagues">
             {/* <SmoothScrollLink className="flex justify-center" href="#plagues"> */}
             <Image
-              className="hidden"
-              // className="transition-transform duration-100 ease-in-out cursor-pointer hover:scale-125"
               alt={"downArrow"}
+              className="hidden"
               height={40}
               src={downArrow}
+              // className="transition-transform duration-100 ease-in-out cursor-pointer hover:scale-125"
             />
           </SmoothScrollLink>
         </div>

@@ -14,12 +14,14 @@ import { SkewedLogo } from "../components/skewedLogo";
 export const Home = () => {
   return (
     <SectionWrapper
-      classnames="-mt-16 hero-background h-screen relative gap-8"
+      classnames="hero-background relative gap-8 py-12 w-full"
+      // classnames="-mt-16 hero-background h-screen relative gap-8"
       id="/"
     >
-      <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2">
+      <div className="container flex flex-col items-center w-4/5 overflow-hidden rounded-md">
+        {/* <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2"> */}
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary "
+          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-8 text-center bg-primary "
         // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
         // style={{ borderRightWidth: "32px" }}
         >
@@ -49,30 +51,26 @@ export const Home = () => {
         </div>
 
         <div
-          className="container relative flex flex-col items-center h-full"
-        // style={{ borderLeft: '10px solid #e0e404' }}
+          className="container relative items-center h-48"
+        // className="container relative flex flex-col items-center h-full"
         >
-          {/* <div
-            className="absolute z-10 w-full h-full top-50 bg-primary "
-            style={{ borderLeft: '10px solid #e0e404', clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}
-          /> */}
-          <div className="flex items-center justify-center w-full h-full bg-gray-300">
-            <Image
-              priority
-              alt="Fumigation"
-              objectFit="cover" // This ensures the image covers the entire container
-              objectPosition="left"
-              src={fumigationImg}
-              // className="absolute inset-0" // This ensures the image fills the container
-              layout="fill"
-            />
-          </div>
+
+          {/* <div className="flex items-center justify-center w-full h-full bg-gray-300"> */}
+          <Image
+            priority
+            alt="Fumigation"
+            objectFit="cover" // This ensures the image covers the entire container
+            objectPosition="left"
+            src={fumigationImg}
+            // className="absolute inset-0" // This ensures the image fills the container
+            layout="fill"
+          />
+          {/* </div> */}
         </div>
       </div>
 
       <Carousel />
       <Wave color="text-primary" version={1} />
-      <WhatsappButton />
     </SectionWrapper>
   );
 };

@@ -4,6 +4,7 @@ import { SectionWrapper } from "../sectionWrapper";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
 import { CarouselImages } from "../components/carousel-images";
+import { title } from "../components/primitives";
 
 const data = [
   {
@@ -26,20 +27,20 @@ const data = [
 export const Company = () => {
   return (
     <SectionWrapper
-      classnames="hero-background h-screen relative"
+      classnames="hero-background relative gap-8 py-24"
+      // classnames="hero-background h-screen relative"
       id={siteConfig.navItems[2].label.toLowerCase()}
     >
       <Wave color="text-primary" version={2} />
 
-      <div className="container flex items-center overflow-hidden rounded-md h-1/2">
+      <div className="container flex flex-col items-center w-4/5 gap-4 overflow-hidden rounded-md">
+        {/* <div className="container flex items-center overflow-hidden rounded-md h-1/2"> */}
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center rounded-md bg-primary"
+          className="relative z-10 flex flex-col items-center justify-center h-full gap-4 p-4 text-center rounded-md bg-primary"
         // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-12 text-center border-r-8 bg-primary border-r-primary"
         // style={{ borderRightWidth: "32px" }}
         >
-          <h2 className="text-6xl italic font-bold text-gray-900 w-fit">
-            Nosotros
-          </h2>
+          <h2 className={`${title()} z-10`}>Nosotros</h2>
           {data.map((data, index) => {
             return (
               <article key={index} className="flex flex-col items-center gap-1">
@@ -54,7 +55,8 @@ export const Company = () => {
           })}
         </div>
 
-        <div className="container relative flex flex-col items-center h-full">
+        <div className="container relative flex flex-col items-center h-64">
+          {/* <div className="container relative flex flex-col items-center h-full"> */}
           {/* <div
             className="absolute z-10 w-full h-full top-50 bg-primary top-[-1px]"
             style={{ clipPath: "polygon(0 0, 0% 0, 15% 0%, 0% 100%)" }}

@@ -7,7 +7,7 @@ interface HomeProps {
 export const SectionWrapper = ({ children, id, classnames }: HomeProps) => {
   return (
     <section
-      className={`${classnames} flex flex-col items-center justify-center gap-4`}
+      className={`${classnames} flex flex-col items-center justify-center gap-4 bg-default-50`}
       id={id}
     >
       {children}

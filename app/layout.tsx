@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/app/config/site";
 import { fontSans } from "@/app/config/fonts";
 import { Navbar } from "@/app/components/navbar";
+import { Footer } from "./components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -35,9 +36,11 @@ export default function RootLayout({
       >
         <Providers>
           <Navbar />
-          <main className="flex-grow mx-auto font-montserrat">
+          <main className="flex flex-col items-end flex-grow mx-auto font-montserrat bg-primary">
+          {/* <main className="flex-grow mx-auto font-montserrat bg-primary"> */}
             {/* <main className="container flex-grow mx-auto max-w-7xl font-montserrat"></main> */}
             {children}
+          <Footer />
           </main>
         </Providers>
       </body>

@@ -99,13 +99,11 @@ export const Carousel: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center w-4/5 gap-2 text-center">
-      {/* <div className="flex flex-col items-center gap-2"> */}
       <h3 className="text-2xl font-bold">Empresas que confían en nosotros</h3>
       <div
         ref={carouselRef}
         className="z-10 w-full overflow-hidden"
         style={{ userSelect: "none" }}
-      // style={{ pointerEvents: "none", userSelect: "none" }}
       >
         <div className="flex gap-4 pl-4">
           {slides.map((slide, index) => (

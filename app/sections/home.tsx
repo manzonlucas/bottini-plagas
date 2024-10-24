@@ -17,11 +17,7 @@ export const Home = () => {
       id="/"
     >
       <div className="container flex flex-col items-center w-4/5 overflow-hidden rounded-md lg:flex-row">
-        {/* <div className="h-1/2"> */}
-        <div
-          className="z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-8 text-center bg-primary "
-        // className="relative"
-        >
+        <div className="z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-8 text-center bg-primary">
           <SkewedLogo />
           <ul className="flex flex-col gap-4 text-2xl text-gray-700">
             <li className="text-lg">
@@ -52,9 +48,9 @@ export const Home = () => {
             <Image
               priority
               alt="Fumigation"
-              src={fumigationImg}
               className="object-cover object-left"
               layout="fill"
+              src={fumigationImg}
             />
           </div>
         </div>

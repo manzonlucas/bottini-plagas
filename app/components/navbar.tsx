@@ -12,9 +12,11 @@ import {
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 import { useState } from "react";
+
 import { SkewedText } from "./skewedText";
 import SmoothScrollLink from "./smoothScrollLink";
-import { siteConfig } from "@/app/config/site"
+
+import { siteConfig } from "@/app/config/site";
 
 export const Navbar = () => {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
@@ -81,6 +83,6 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
-    </NextUINavbar >
+    </NextUINavbar>
   );
 };

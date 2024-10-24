@@ -1,12 +1,8 @@
-import Image from "next/image";
-
 import { PlaguesGrid } from "../components/plaguesGrid";
 import { title } from "../components/primitives";
 import { SkewedText } from "../components/skewedText";
 import { siteConfig } from "../config/site";
 import { SectionWrapper } from "../sectionWrapper";
-import downArrow from "../../public/down-arrow.png";
-import SmoothScrollLink from "../components/smoothScrollLink";
 
 const data = [
   {
@@ -66,7 +62,7 @@ export const Services = () => {
                   {element.content}
                 </p>
               </div>
-            )
+            );
           })}
         </div>
       </SectionWrapper>
@@ -74,7 +70,6 @@ export const Services = () => {
       <SectionWrapper classnames="bg-primary pt-12 text-center" id={"plagues"}>
         <h2 className={title()}>Principales plagas urbanas</h2>
         <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 rounded-md lg:grid-cols-3 lg:grid-rows-2 lg:gap-8 lg:p-8 h-3/4 bg-background hero-background">
-          {/* "w-4/5 */}
           <PlaguesGrid />
         </div>
       </SectionWrapper>

@@ -32,9 +32,7 @@ export const Company = () => {
       <Wave color="text-primary" version={2} />
 
       <div className="container flex flex-col items-center w-4/5 gap-4 overflow-hidden rounded-md lg:flex-row lg:h-2/3">
-        <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-4 text-center rounded-md bg-primary lg:p-12"
-        >
+        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-4 p-4 text-center rounded-md bg-primary lg:p-12">
           <h2 className={`${title()} z-10`}>Nosotros</h2>
           {data.map((data, index) => {
             return (

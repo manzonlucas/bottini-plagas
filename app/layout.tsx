@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import clsx from "clsx";
+
 import { Providers } from "./providers";
 import { Footer } from "./components/footer";
+
 import { siteConfig } from "@/app/config/site";
 import { fontSans } from "@/app/config/fonts";
 import { Navbar } from "@/app/components/navbar";

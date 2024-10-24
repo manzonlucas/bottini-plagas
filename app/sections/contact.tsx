@@ -52,7 +52,7 @@ export const Contact = () => {
 
   return (
     <SectionWrapper
-      classnames="bg-primary h-auto pt-20 w-full lg:h-[calc(100vh-177px)]"
+      classnames="bg-primary h-auto pt-12 w-full lg:h-[calc(100vh-177px)]"
       id={siteConfig.navItems[3].label.toLowerCase()}
     >
       <h2 className={`${title()} z-10`}>Contacto</h2>

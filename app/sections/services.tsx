@@ -67,9 +67,9 @@ export const Services = () => {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper classnames="bg-primary pt-12 text-center" id={"plagues"}>
+      <SectionWrapper classnames="bg-primary pt-12 text-center w-full" id={"plagues"}>
         <h2 className={title()}>Principales plagas urbanas</h2>
-        <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 rounded-md lg:grid-cols-3 lg:grid-rows-2 lg:gap-8 lg:p-8 h-3/4 bg-background hero-background">
+        <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 rounded-md md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 lg:gap-8 lg:p-8 h-3/4 bg-background hero-background">
           <PlaguesGrid />
         </div>
       </SectionWrapper>

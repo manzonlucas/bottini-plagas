@@ -45,12 +45,11 @@ export const Services = () => {
   return (
     <>
       <SectionWrapper
-        classnames="bg-primary pt-20"
+        classnames="bg-primary pt-20 lg:pt-8 lg:h-screen"
         id={siteConfig.navItems[1].label.toLowerCase()}
       >
         <h2 className={title()}>Nuestros servicios</h2>
-        <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 text-center rounded-md h-3/4 bg-background hero-background">
-          {/* <div className="grid w-4/5 grid-cols-3 grid-rows-2 gap-8 p-8 text-center rounded-md h-3/4 bg-background hero-background"> */}
+        <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 text-center rounded-md lg:grid-cols-3 lg:grid-rows-2 lg:gap-8 h-3/4 bg-background hero-background">
           {data.map((element, index) => {
             return (
               <div
@@ -67,32 +66,15 @@ export const Services = () => {
                   {element.content}
                 </p>
               </div>
-            );
+            )
           })}
-
-          <Image
-            alt={"downArrow"}
-            className="hidden"
-            // className="invisible"
-            height={40}
-            src={downArrow}
-          />
-          <SmoothScrollLink className="justify-center hidden" href="#plagues">
-            {/* <SmoothScrollLink className="flex justify-center" href="#plagues"> */}
-            <Image
-              alt={"downArrow"}
-              className="hidden"
-              height={40}
-              src={downArrow}
-              // className="transition-transform duration-100 ease-in-out cursor-pointer hover:scale-125"
-            />
-          </SmoothScrollLink>
         </div>
       </SectionWrapper>
 
       <SectionWrapper classnames="bg-primary pt-12 text-center" id={"plagues"}>
         <h2 className={title()}>Principales plagas urbanas</h2>
-        <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 rounded-md h-3/4 bg-background hero-background">
+        <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 rounded-md lg:grid-cols-3 lg:grid-rows-2 lg:gap-8 lg:p-8 h-3/4 bg-background hero-background">
+          {/* "w-4/5 */}
           <PlaguesGrid />
         </div>
       </SectionWrapper>

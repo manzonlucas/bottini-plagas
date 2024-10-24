@@ -52,14 +52,11 @@ export const Contact = () => {
 
   return (
     <SectionWrapper
-      // classnames="bg-primary h-auto pb-14"
-      classnames="bg-primary h-auto pt-20"
-      // classnames="bg-primary h-[calc(100vh-96px)]"
+      classnames="bg-primary h-auto pt-20 w-full lg:h-[calc(100vh-177px)]"
       id={siteConfig.navItems[3].label.toLowerCase()}
     >
       <h2 className={`${title()} z-10`}>Contacto</h2>
       <div className="flex flex-col items-center w-4/5 gap-4 p-2 text-center rounded-md bg-background hero-background">
-        {/* <div className="flex flex-col items-center w-4/5 gap-4 p-8 text-center rounded-md bg-background hero-background"> */}
         {data.map((element, index) => {
           return (
             <button

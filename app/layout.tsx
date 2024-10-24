@@ -37,8 +37,6 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main className="flex flex-col items-center flex-grow mx-auto font-montserrat bg-primary">
-            {/* <main className="flex-grow mx-auto font-montserrat bg-primary"> */}
-            {/* <main className="container flex-grow mx-auto max-w-7xl font-montserrat"></main> */}
             {children}
             <Footer />
           </main>

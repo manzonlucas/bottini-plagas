@@ -13,16 +13,14 @@ import { SkewedLogo } from "../components/skewedLogo";
 export const Home = () => {
   return (
     <SectionWrapper
-      classnames="hero-background relative gap-8 pt-12 w-full"
-      // classnames="-mt-16 hero-background h-screen relative gap-8"
+      classnames="hero-background relative gap-8 w-full h-screen pt-4 lg:pt-0"
       id="/"
     >
-      <div className="container flex flex-col items-center w-4/5 overflow-hidden rounded-md">
-        {/* <div className="container flex items-center w-4/5 overflow-hidden rounded-md h-1/2"> */}
+      <div className="container flex flex-col items-center w-4/5 overflow-hidden rounded-md lg:flex-row">
+        {/* <div className="h-1/2"> */}
         <div
-          className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-8 text-center bg-primary "
-          // className="relative z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-12 text-center bg-primary border-r-primary"
-          // style={{ borderRightWidth: "32px" }}
+          className="z-10 flex flex-col items-center justify-center w-full h-full gap-8 p-8 text-center bg-primary "
+        // className="relative"
         >
           <SkewedLogo />
           <ul className="flex flex-col gap-4 text-2xl text-gray-700">
@@ -49,21 +47,16 @@ export const Home = () => {
           </SmoothScrollLink>
         </div>
 
-        <div
-          className="container relative items-center h-48"
-          // className="container relative flex flex-col items-center h-full"
-        >
-          {/* <div className="flex items-center justify-center w-full h-full bg-gray-300"> */}
-          <Image
-            priority
-            alt="Fumigation"
-            // objectFit="cover" // This ensures the image covers the entire container
-            // objectPosition="left"
-            src={fumigationImg}
-            // className="absolute inset-0" // This ensures the image fills the container
-            // layout="fill"
-          />
-          {/* </div> */}
+        <div className="relative flex items-center w-full h-full">
+          <div className="w-full h-full">
+            <Image
+              priority
+              alt="Fumigation"
+              src={fumigationImg}
+              className="object-cover object-left"
+              layout="fill"
+            />
+          </div>
         </div>
       </div>
 

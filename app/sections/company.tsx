@@ -26,7 +26,7 @@ const data = [
 export const Company = () => {
   return (
     <SectionWrapper
-      classnames="hero-background relative gap-8 py-24"
+      classnames="hero-background relative gap-8 pt-20 w-full"
       // classnames="hero-background h-screen relative"
       id={siteConfig.navItems[2].label.toLowerCase()}
     >

@@ -13,7 +13,7 @@ import { SkewedLogo } from "../components/skewedLogo";
 export const Home = () => {
   return (
     <SectionWrapper
-      classnames="hero-background relative gap-8 py-12 w-full"
+      classnames="hero-background relative gap-8 pt-12 w-full"
       // classnames="-mt-16 hero-background h-screen relative gap-8"
       id="/"
     >

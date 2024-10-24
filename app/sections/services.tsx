@@ -45,7 +45,7 @@ export const Services = () => {
   return (
     <>
       <SectionWrapper
-        classnames="bg-primary"
+        classnames="bg-primary pt-20"
         id={siteConfig.navItems[1].label.toLowerCase()}
       >
         <h2 className={title()}>Nuestros servicios</h2>
@@ -90,7 +90,7 @@ export const Services = () => {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper classnames="bg-primary pt-20 text-center" id={"plagues"}>
+      <SectionWrapper classnames="bg-primary pt-12 text-center" id={"plagues"}>
         <h2 className={title()}>Principales plagas urbanas</h2>
         <div className="grid w-4/5 grid-cols-1 grid-rows-1 gap-4 p-4 rounded-md h-3/4 bg-background hero-background">
           <PlaguesGrid />

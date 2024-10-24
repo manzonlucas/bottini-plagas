@@ -53,7 +53,7 @@ export const Contact = () => {
   return (
     <SectionWrapper
       // classnames="bg-primary h-auto pb-14"
-      classnames="bg-primary h-auto"
+      classnames="bg-primary h-auto pt-20"
       // classnames="bg-primary h-[calc(100vh-96px)]"
       id={siteConfig.navItems[3].label.toLowerCase()}
     >

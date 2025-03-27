@@ -9,7 +9,7 @@ const data = [
   {
     title: "Empresa familiar",
     content:
-      "Bottini Plagas es una empresa familiar de la ciudad de Pergamino que cuenta con más de 20 años de trayectoria en el rubro.",
+      "Bottini Plagas es una empresa familiar de la ciudad de Pergamino que cuenta con más de 30 años de trayectoria en el rubro.",
   },
   {
     title: "Confiabilidad",
